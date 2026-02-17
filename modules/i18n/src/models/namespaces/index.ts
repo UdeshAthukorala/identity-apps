@@ -42,6 +42,7 @@ export * from "./session-management-ns";
 export * from "./ws-federation-config-ns";
 export * from "./insights-ns";
 export * from "./sms-providers-ns";
+export * from "./email-providers-ns";
 export * from "./claims-ns";
 export * from "./email-locale-ns";
 export * from "./help-panel-ns";

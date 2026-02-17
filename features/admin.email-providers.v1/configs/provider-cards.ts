@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2024, WSO2 LLC. (https://www.wso2.com).
+ * Copyright (c) 2023-2024, WSO2 LLC. (https://www.wso2.com).
  *
  * WSO2 LLC. licenses this file to you under the Apache License,
  * Version 2.0 (the "License"); you may not use this file except
@@ -16,7 +16,19 @@
  * under the License.
  */
 
-export { default as EmailProvidersPage } from "./pages/email-providers";
-export { default as CustomEmailProvider } from "./pages/custom-email-provider";
-export { default as SMTPEmailProvider } from "./pages/smtp-email-provider";
-export { default as MultiProviderEmailProvidersPage } from "./pages/multi-provider-email-providers";
+import { getEmailProviderIcons } from "../configs/ui";
+
+/**
+ * Interface for email provider card.
+ */
+export interface EmailProviderCardInterface {
+    icon: React.ReactElement;
+    id: number;
+    key: string;
+    name: string;
+}
+
+export const providerCards: EmailProviderCardInterface[] = [
+    { icon: getEmailProviderIcons().smtp, id: 1, key: "SMTPProvider", name: "SMTP" },
+    { icon: getEmailProviderIcons().custom, id: 2, key: "CustomEmailProvider", name: "Custom" }
+];

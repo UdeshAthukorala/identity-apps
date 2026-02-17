@@ -53,6 +53,10 @@ export class EmailProviderConstants {
     public static readonly AUTHENTICATION_TYPE_BASIC: string = "BASIC";
     public static readonly AUTHENTICATION_TYPE_CLIENT_CREDENTIAL: string = "CLIENT_CREDENTIAL";
 
+    // Email Provider Types
+    public static readonly SMTP_EMAIL_PROVIDER: string = "SMTPProvider";
+    public static readonly CUSTOM_EMAIL_PROVIDER: string = "CustomEmailProvider";
+
     public static readonly EMAIL_PROVIDER_CONFIG_FETCH_ERROR_CODE: string = "ASG-EPC-00001";
     public static readonly EMAIL_PROVIDER_CONFIG_FETCH_INVALID_STATUS_CODE_ERROR_CODE: string = "ASG-EPC-00002";
     public static readonly EMAIL_PROVIDER_CONFIG_UPDATE_ERROR_CODE: string = "ASG-EP-00003";
@@ -63,6 +67,22 @@ export class EmailProviderConstants {
     public static readonly EMAIL_PROVIDER_CONFIG_FIELD_MAX_LENGTH: number = 255;
     public static readonly EMAIL_PROVIDER_SERVER_PORT_MAX_LENGTH: number = 6;
     public static readonly EMAIL_REGEX: RegExp = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    public static readonly EMAIL_PROVIDER_CONFIG_FIELD_CONSTRAINTS: {
+        HEADERS_MAX_LENGTH: number;
+        HEADERS_MIN_LENGTH: number;
+        PAYLOAD_MAX_LENGTH: number;
+        PAYLOAD_MIN_LENGTH: number;
+        PROVIDER_URL_MAX_LENGTH: number;
+        PROVIDER_URL_MIN_LENGTH: number;
+    } = {
+        HEADERS_MAX_LENGTH: 1024,
+        HEADERS_MIN_LENGTH: 0,
+        PAYLOAD_MAX_LENGTH: 2048,
+        PAYLOAD_MIN_LENGTH: 0,
+        PROVIDER_URL_MAX_LENGTH: 2048,
+        PROVIDER_URL_MIN_LENGTH: 0
+    };
 
     public static ErrorMessages: {
         EMAIL_PROVIDER_CONFIG_FETCH_ERROR_CODE: IdentityAppsError;

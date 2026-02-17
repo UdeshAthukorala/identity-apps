@@ -16,7 +16,9 @@
  * under the License.
  */
 
+import React from "react";
 import { IdentifiableComponentInterface } from "@wso2is/core/models";
+import { AuthenticationType } from "../constants/email-provider-constants";
 
 /**
  * The interface of the email provider config properties attribute.
@@ -71,6 +73,55 @@ export interface EmailProviderConfigFormErrorValidationsInterface {
     clientSecret?: string;
     tokenEndpoint?: string;
     scopes?: string;
+}
+
+/**
+ * Interface for email provider card.
+ */
+export interface EmailProviderCardInterface {
+    icon: React.ReactElement;
+    id: number;
+    key: string;
+    name: string;
+}
+
+/**
+ * Interface for email provider state.
+ */
+export interface EmailProviderInterface {
+    name?: string;
+    provider?: string;
+    authType?: AuthenticationType;
+    // SMTP specific fields
+    smtpServerHost?: string;
+    smtpPort?: number;
+    fromAddress?: string;
+    userName?: string;
+    password?: string;
+    displayName?: string;
+    replyToAddress?: string;
+    // Custom provider specific fields
+    providerURL?: string;
+    contentType?: string;
+    httpMethod?: string;
+    payload?: string;
+    headers?: string;
+    // Authentication fields
+    clientId?: string;
+    clientSecret?: string;
+    tokenEndpoint?: string;
+    scopes?: string;
+    accessToken?: string;
+    header?: string;
+    value?: string;
+}
+
+/**
+ * Interface for email provider settings state.
+ */
+export interface EmailProviderSettingsState {
+    providerParams: { [key: string]: EmailProviderInterface };
+    selectedProvider: string;
 }
 
 /**

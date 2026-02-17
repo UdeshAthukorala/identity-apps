@@ -1,0 +1,109 @@
+/**
+ * Copyright (c) 2024, WSO2 LLC. (https://www.wso2.com).
+ *
+ * WSO2 LLC. licenses this file to you under the Apache License,
+ * Version 2.0 (the "License"); you may not use this file except
+ * in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied. See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+ .email-provider-config-form {
+
+    .MuiInputBase-root {
+        // TODO: Fix this from the `@oxygen-ui/react` side and remove.
+        // Tracker: https://github.com/wso2/oxygen-ui/issues/331
+        &.Mui-readOnly {
+            cursor: default;
+            background-color: #e9ecef!important;
+        }
+    }
+
+    // Email provider-specific authentication field spacing
+    .external-api-auth-config-page {
+        .form-wrapper {
+            .hint-text {
+                margin-bottom: 16px;
+            }
+        }
+
+        .box-container {
+            .box-field {
+                .addon-field-wrapper {
+                    margin-bottom: 16px;
+
+                    &:first-of-type {
+                        margin-top: 8px;
+                    }
+                }
+            }
+        }
+    }
+
+    // Provider selection cards
+    .card-list {
+        margin-bottom: 2rem;
+
+        .email-provider-info-card {
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all 0.2s ease;
+
+            &:hover {
+                border-color: #e0e0e0;
+            }
+
+            &.selected {
+                border-color: #ff5000;
+                box-shadow: 0 2px 8px rgba(255, 80, 0, 0.1);
+            }
+
+            .email-provider-icon {
+                font-size: 2rem;
+                text-align: center;
+                padding: 0.5rem;
+            }
+
+            // Force inline layout for icon and text
+            &.ui.card {
+                .image {
+                    float: left !important;
+                    margin: 0 10px 0 0 !important;
+                    width: auto !important;
+                    clear: none !important;
+                }
+
+                .content {
+                    overflow: hidden !important;
+                    padding-left: 0 !important;
+
+                    .header {
+                        margin-top: 5px !important;
+                        line-height: 30px !important;
+                    }
+                }
+            }
+
+            // Alternative targeting
+            .ui.card > .image + .content {
+                margin-left: 40px !important;
+                padding-left: 0 !important;
+            }
+
+            .ui.card > .image {
+                position: absolute !important;
+                top: 14px !important;
+                left: 14px !important;
+                margin: 0 !important;
+            }
+        }
+    }
+}

@@ -193,6 +193,11 @@ export class I18nConstants {
     public static readonly SMS_PROVIDERS_NAMESPACE: string = I18nModuleConstants.SMS_PROVIDERS_NAMESPACE;
 
     /**
+     * Email Providers namespace.
+     */
+    public static readonly EMAIL_PROVIDERS_NAMESPACE: string = I18nModuleConstants.EMAIL_PROVIDERS_NAMESPACE;
+
+    /**
      * Push Providers namespace.
      */
     public static readonly PUSH_PROVIDERS_NAMESPACE: string = I18nModuleConstants.PUSH_PROVIDERS_NAMESPACE;
@@ -393,6 +398,8 @@ export class I18nConstants {
         [ I18nConstants.POLICY_ADMINISTRATION_NAMESPACE, "portals" ],
         [ I18nConstants.REMOTE_USER_STORES_NAMESPACE, "portals" ],
         [ I18nConstants.RULES_NAMESPACE, "portals" ],
+        [ I18nConstants.SMS_PROVIDERS_NAMESPACE, "portals" ],
+        [ I18nConstants.EMAIL_PROVIDERS_NAMESPACE, "portals" ],
         [ I18nConstants.PUSH_PROVIDERS_NAMESPACE, "portals" ],
         [ I18nConstants.EXTERNAL_API_AUTHENTICATION_NAMESPACE, "portals" ],
         [ I18nConstants.APPROVAL_WORKFLOWS_NAMESPACE, "portals" ],

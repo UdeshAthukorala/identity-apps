@@ -44,6 +44,7 @@ export * from "./session-management";
 export * from "./ws-federation-config";
 export * from "./insights";
 export * from "./sms-providers";
+export * from "./email-providers";
 export * from "./claims";
 export * from "./email-locale";
 export * from "./help-panel";

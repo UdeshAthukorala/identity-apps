@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2024, WSO2 LLC. (https://www.wso2.com).
+ * Copyright (c) 2023-2024, WSO2 LLC. (https://www.wso2.com).
  *
  * WSO2 LLC. licenses this file to you under the Apache License,
  * Version 2.0 (the "License"); you may not use this file except
@@ -16,7 +16,20 @@
  * under the License.
  */
 
-export { default as EmailProvidersPage } from "./pages/email-providers";
-export { default as CustomEmailProvider } from "./pages/custom-email-provider";
-export { default as SMTPEmailProvider } from "./pages/smtp-email-provider";
-export { default as MultiProviderEmailProvidersPage } from "./pages/multi-provider-email-providers";
+import { FunctionComponent, ReactNode } from "react";
+import { ReactComponent as EmailIcon } from "../../themes/default/assets/images/icons/email-icon.svg";
+
+/**
+ * Get the email provider icons.
+ *
+ * @returns Email provider icons.
+ */
+export const getEmailProviderIcons = (): {
+    smtp: FunctionComponent | ReactNode;
+    custom: FunctionComponent | ReactNode;
+} => {
+    return {
+        custom: EmailIcon, // Using EmailIcon for custom email provider
+        smtp: EmailIcon
+    };
+};

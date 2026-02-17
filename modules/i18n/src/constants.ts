@@ -197,6 +197,11 @@ export class I18nModuleConstants {
     public static readonly SMS_PROVIDERS_NAMESPACE: string = "smsProviders";
 
     /**
+     * Email Providers namespace.
+     */
+    public static readonly EMAIL_PROVIDERS_NAMESPACE: string = "emailProviders";
+
+    /**
      * Push Templates namespace.
      */
     public static readonly PUSH_PROVIDERS_NAMESPACE: string = "pushProviders";
