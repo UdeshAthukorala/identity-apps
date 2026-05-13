@@ -17,43 +17,9 @@
  */
 
 /**
- * CDS related error constants.
- */
-export const CDS_ERRORS: Record<string, string> = {
-    DELETE_PROFILE_ERROR: "CDS_PROFILE_DELETE_ERROR",
-    FETCH_PROFILES_ERROR: "CDS_PROFILES_FETCH_ERROR",
-    FETCH_PROFILE_ERROR: "CDS_PROFILE_FETCH_ERROR",
-    INVALID_STATUS_CODE: "CDS_INVALID_STATUS_CODE"
-};
-
-export const CDS_PROFILE_ATTRIBUTE_SCOPES: Record<string, string>  = {
-    APPLICATION_DATA: "application_data",
-    IDENTITY_ATTRIBUTES: "identity_attributes",
-    TRAITS: "traits"
-};
-
-/**
- * Default profile list fields to fetch
- */
-export const DEFAULT_PROFILE_LIST_FIELDS: string[] = [
-    "identity_attributes.username",
-    "identity_attributes.givenname",
-    "identity_attributes.lastname"
-];
-
-/**
  * Default pagination settings
  */
 export const DEFAULT_PAGE_SIZE: number = 10;
-
-/**
- * Profile search operators
- */
-export const PROFILE_SEARCH_OPERATORS: Record<string, string>= {
-    CONTAINS: "co",
-    EQUALS: "eq",
-    STARTS_WITH: "sw"
-};
 
 export const APPLICATION_DATA: string = "application_data";
 export const IDENTITY_ATTRIBUTES: string = "identity_attributes";
@@ -65,3 +31,13 @@ export const AND_OPERATOR: string = "and";
  * two rules having the same priority at any point.
  */
 export const TEMP_PRIORITY: number = 999999;
+
+export const ATTRIBUTE_TYPE_PRIMITIVE_EXACT: string = "PRIMITIVE_EXACT";
+export const UNIFICATION_METHOD_DETERMINISTIC: string = "deterministic";
+export const UNIFICATION_METHOD_FUZZY: string = "fuzzy";
+
+export const FUZZY_ATTRIBUTE_TYPE_FUZZY_STRING: string = "FUZZY_STRING";
+export const FUZZY_ATTRIBUTE_TYPE_NAME: string = "NAME";
+export const FUZZY_ATTRIBUTE_TYPE_EMAIL: string = "EMAIL";
+export const FUZZY_ATTRIBUTE_TYPE_PHONE: string = "PHONE";
+export const FUZZY_ATTRIBUTE_TYPE_LOCATION: string = "LOCATION";
